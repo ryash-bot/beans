@@ -27,30 +27,37 @@ public class netBeans {
 	     asalSekolahKu[3].namaSekkolah = "Universitas Multi Data Palembang";
 	     asalSekolahKu[3].alamatSekolah = "Jl. Rajawali No.14, 9 Ilir, Kec. Ilir Tim. II, Kota Palembang, Sumatera Selatan 30113";
 	     asalSekolahKu[3].linkGMaps = "https://maps.app.goo.gl/EBVS3ifscX2VvPD9A";
+	      
+	     String sData = "";
+	     for (int i = 0; i < asalSekolahKu.length; i++) {
+	            sData += asalSekolahKu[i].tampilDataMahasiswa() + "\n\n";
+	        }
+
+	        // Tampilkan sekali saja di JOptionPane
+	        JOptionPane.showMessageDialog(null, sData, "Data Semua Sekolah", JOptionPane.INFORMATION_MESSAGE);
+	    		 
 	     
 	     
-	     
-	     for (int i = 0; i < 4; i++) {
-			asalSekolahKu[i].tampilDataMahasiswa ();
-			System.out.println();
+//	     for (int i = 0; i < 4; i++) {
+//			asalSekolahKu[i].tampilDataMahasiswa ();
+//			System.out.println();
+			
 			
 		}
 	}
 
-}
 class Sekolah {
 	String namaSekkolah;
 	String alamatSekolah;
 	String linkGMaps;
-	void tampilDataMahasiswa() {
-		String bb = "Nama Sekolah = " + namaSekkolah 
-				+ "\nAlamat Sekolah" + alamatSekolah 
-				+ "\nLink GMaps" + linkGMaps;
-		System.out.println(bb);
+	String tampilDataMahasiswa() {
+		return "Nama Sekolah = " + namaSekkolah 
+				+ "\nAlamat Sekolah = " + alamatSekolah 
+				+ "\nLink GMaps = " + linkGMaps;
 //		System.out.println("Nama Sekolah = " + namaSekkolah);
 //		System.out.println("Alamat Sekolah = " + alamatSekolah);
 //		System.out.println("Link Gmaps = " + linkGMaps);
-		JOptionPane.showMessageDialog(null, bb, "Data Mahasiswa", JOptionPane.INFORMATION_MESSAGE);
+		//  JOptionPane.showMessageDialog(null, sData, "Data Semua Sekolah", JOptionPane.INFORMATION_MESSAGE);
 		
 	}
 }
